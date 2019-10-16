@@ -1,3 +1,12 @@
+/* Author : Nicholas Riggins
+ * Date: September 2019
+ * Simple blink code lab 2
+ * board MSP-EXP430FR6989
+ * Will blink led 1.0
+ *
+ */
+
+
 #include <msp430.h> 
 #include <stdio.h>
 
