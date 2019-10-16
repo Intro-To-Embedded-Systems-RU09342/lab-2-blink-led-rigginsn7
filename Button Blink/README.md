@@ -1,7 +1,7 @@
 # Button Blink
 For this part of the lab the LED would be turned on then when a button on the board was pressed the LED would proceed to blink. This was done using the internal resistor and setting it to 1. After that it was but in an if statement comparing the initial value to the current value. When the button is pressed the current value is then read to be 0. When these 2 values are compared in an if statement if they're not the same then the LED starts to toggle. 
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
+# Processors Utilized
 * MSP430G2553
 * MSP430FR6989
 
