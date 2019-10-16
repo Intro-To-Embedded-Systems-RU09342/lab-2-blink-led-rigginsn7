@@ -1,18 +1,12 @@
 # Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
+For this part of the lab the LED would be turned on then when a button on the board was pressed the LED would proceed to blink. This was done using the internal resistor and setting it to 1. After that it was but in an if statement comparing the initial value to the current value. When the button is pressed the current value is then read to be 0. When these 2 values are compared in an if statement if they're not the same then the LED starts to toggle. 
 
 # YOU NEED TO CREATE THE FOLLOWING FOLDERS
 * MSP430G2553
-* MSP(FILL IN THE PROCESSOR YOU ARE USING)
+* MSP430FR6989
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise. Make sure you talk about how your button is configured (momentary or continuous. Normally open or closed. Does the button press indicate when the LED should be on or off.)
+## Dependencies
+The only dependency is the library called MSP430.h. this is used for all TI MSP 430 processors.
 
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
-
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
-
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+## Difference in the Processors
+For the MSP430FR6989 I had to disable the GPIO power on default high impedence mode. This allowed me to activate previously configured port settings. If you don't do this you can not use the on board LEDs. The only other difference in the code is the pin assignments specific to each board
